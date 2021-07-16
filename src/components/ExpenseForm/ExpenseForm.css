@@ -1,0 +1,64 @@
+.expense-form{
+	margin: 0;
+    width: auto;
+	display: flex;
+    padding: 15px;
+    height: 250px;
+	flex-wrap: wrap;
+	position:relative; /* hide if you want to take this button to your windows right bottom */
+    border-radius: 10px;
+    background-color: #79309b;
+}   
+
+.expense-form label{
+	padding: 5px;
+	color: white;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.expense-form input{
+	margin: 10px;
+	padding: 10px;
+}
+
+input{
+	width: 250px;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+input, label {
+    display:block;
+}
+
+form{
+	margin: 5px;	
+}
+
+form div {
+	float:left;
+	margin-right:20px;
+}
+
+form .button{
+	right: 40px;
+	bottom: 40px;
+	border: none;
+	color: white;
+	position:absolute;
+	font-size: 16px;
+	text-align: center;
+	padding: 15px 32px;
+	text-decoration: none;
+    background-color: purple;
+	border: 1px solid white;
+	border-radius: 10px;
+} 
+
+@media only screen and (max-width: 1100px) {
+    .expense-item-cost{
+        font-size: 0.8rem;
+        padding: 20px;
+    }
+  }

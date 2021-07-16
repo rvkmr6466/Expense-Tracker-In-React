@@ -1,10 +1,25 @@
 import React from 'react';
+import '../ExpenseForm/ExpenseForm.css';
 
 const ExpenseForm = () => {
     return (
-        <div>
+        <div className="expense-form">
             <form>
-                <input type="text" />
+                <div>
+                    <label>Title:</label>
+                    <input type="text" />
+                </div>
+                <div>
+                    <label>Amount:</label>
+                    <input type="text" />
+                </div>
+
+                <div>
+                <label>Date:</label>
+                <input type="date" />
+                </div>
+
+                <button class="button" type="submit">Add Expense</button>
             </form>
         </div>
     )
