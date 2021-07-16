@@ -1,5 +1,50 @@
-.expense-item{
-    border: 1px solid black;
+.expense-item {
+    margin: 2px 10px;
+    padding: 5px;
     display: flex;
-    align-items: stretch;
+    color: white;
+    flex-wrap: nowrap;
+    border-radius: 10px;
+    background-color: rgb(44, 44, 44);
+    border: 0px solid rgb(255, 255, 255);
 }
+
+.expense-item-content{
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    width: 90%;
+    margin: 10px;
+}
+
+.expense-item-title {
+    background-color: rgb(44, 44, 44);
+    text-align: left;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 15px;
+    width: 75%;
+}
+
+.expense-item-cost {
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 15%;
+    background-color: purple;
+}
+
+.expense-item-cost > span{
+    background-color: purple;
+}
+
+@media only screen and (max-width: 1100px) {
+    .expense-item-cost{
+        font-size: 0.8rem;
+        padding: 20px;
+    }
+  }
