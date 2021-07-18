@@ -5,7 +5,7 @@ const ExpenseModel = [
         expenseCost: 400,
         dop:'16 August 2020'
     },
-    {
+    /* {
         id: 2,
         title: 'Hospital Bill',
         expenseCost: 5400,
@@ -22,7 +22,7 @@ const ExpenseModel = [
         title: 'Stationary Items',
         expenseCost: 200,
         dop:'01 October 2020'
-    }
+    } */
 ];
 
 export default ExpenseModel;

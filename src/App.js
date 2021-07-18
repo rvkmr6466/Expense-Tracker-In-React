@@ -1,28 +1,19 @@
-import React from 'react';
-import ExpenseItem from './components/ExpenseItem/ExpenseItem';
 import './App.css';
-import Expenses from './models/ExpenseModel';
-import NewExpense from './components/ExpenseForm/NewExpense';
-import './components/ExpenseForm/ExpenseForm.css'
+import React from 'react';
+import NewExpense from './components/NewExpense/NewExpense';
+import ExpenseItems from './components/ExpenseItems/ExpenseItems';
 
 const App = () => {
-	/* const saveExpenseDataHandler = (enteredExpenseDate) => {
-		const expenseData = { _id: Math.random().toString() , ...enteredExpenseDate};
-		console.log(expenseData);
-	} */
+
+	const addExpenseHandler = (expense) =>{
+		console.log("In App.js");
+		console.log(expense);
+	}
+	
 	return (
 		<div className="card">
-			{/* <NewExpense onSaveExpenseForm={saveExpenseDataHandler}/> */}
-			<NewExpense/>
-			{Expenses.map((expense, index) => {
-				return <ExpenseItem
-					id={index}
-					key={index}
-					title={expense.title}
-					expenseCost={expense.expenseCost}
-					dop={expense.dop}
-				/>
-			})}
+			<NewExpense onAddExpenses={addExpenseHandler}/>
+			<ExpenseItems />
 		</div>
 	);
 }
