@@ -2,7 +2,8 @@ import React from 'react';
 import ExpenseDate from '../ExpenseDate/ExpenseDate';
 import './ExpenseItem.css';
 
-const ExpenseItem = (props) => {
+const ExpenseItem = props => {
+
     return <div className="expense-item">
         <ExpenseDate date={props.dop}/>
         <div className="expense-item-content">

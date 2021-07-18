@@ -2,13 +2,18 @@ import React from 'react';
 import ExpenseItem from './components/ExpenseItem/ExpenseItem';
 import './App.css';
 import Expenses from './models/ExpenseModel';
-import ExpenseForm from './components/ExpenseForm/ExpenseForm';
+import NewExpense from './components/ExpenseForm/NewExpense';
+import './components/ExpenseForm/ExpenseForm.css'
 
 const App = () => {
-	// console.log(Expenses)
+	/* const saveExpenseDataHandler = (enteredExpenseDate) => {
+		const expenseData = { _id: Math.random().toString() , ...enteredExpenseDate};
+		console.log(expenseData);
+	} */
 	return (
 		<div className="card">
-		<ExpenseForm />
+			{/* <NewExpense onSaveExpenseForm={saveExpenseDataHandler}/> */}
+			<NewExpense/>
 			{Expenses.map((expense, index) => {
 				return <ExpenseItem
 					id={index}

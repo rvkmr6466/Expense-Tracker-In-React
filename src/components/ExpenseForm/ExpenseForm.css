@@ -1,9 +1,8 @@
 .expense-form{
 	margin: 0;
-    width: auto;
 	display: flex;
     padding: 15px;
-    height: 250px;
+    height: auto;
 	flex-wrap: wrap;
 	position:relative; /* hide if you want to take this button to your windows right bottom */
     border-radius: 10px;
@@ -26,6 +25,10 @@ input{
 	width: 250px;
 	padding: 10px;
 	border-radius: 10px;
+}
+
+input[type=date]{
+	
 }
 
 input, label {

@@ -7,12 +7,12 @@ import './ExpenseDate.css';
  * @description 
  * @returns 
  */
-const ExpenseDate = (props) => {
+const ExpenseDate = props => {
     const ExpenseDate = new Date(props.date);
-    console.log(ExpenseDate);
+    // console.log(ExpenseDate);
     return (<div className="expense-date">
         <div className="expense-date-month">{ExpenseDate.toLocaleString('default', { month: 'long' })}</div>
-        <div className="expense-date-year">{ExpenseDate.getFullYear()}</div>
+        <div className="expense-date-year">{ExpenseDate.getUTCFullYear()}</div>
         <div className="expense-date-day">{ExpenseDate.getUTCDate()}</div>
     </div>)
 }
