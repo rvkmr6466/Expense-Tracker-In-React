@@ -8,8 +8,8 @@ import './ExpenseDate.css';
  * @returns 
  */
 const ExpenseDate = props => {
+    console.log("props in date:", props);
     const ExpenseDate = new Date(props.date);
-    // console.log(ExpenseDate);
     return (<div className="expense-date">
         <div className="expense-date-month">{ExpenseDate.toLocaleString('default', { month: 'long' })}</div>
         <div className="expense-date-year">{ExpenseDate.getUTCFullYear()}</div>

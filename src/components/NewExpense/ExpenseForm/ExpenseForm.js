@@ -44,9 +44,10 @@ const ExpenseForm = (props) => {
     const submitHandler = (event) => {
         const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
-            date: enteredDate
+            expenseCost: enteredAmount,
+            dop: enteredDate
         }
+        console.log(expenseData);
         props.onSaveExpenseForm(expenseData);
         setEnteredTitle('');
         setEnteredAmount('');
@@ -54,41 +55,51 @@ const ExpenseForm = (props) => {
         event.preventDefault();
     }
 
+    /**
+     * 
+     */
+    const hideExpenseForm = () => {
+        props.onCancelExpenseForm();
+    }
+
     return (
         <form onSubmit={submitHandler}>
-            <div>
+            <div className="grid">
                 <label>Title:</label>
                 <input
                     type="text"
                     value={enteredTitle}
-                    placeholder="Expense"
                     onChange={titleChangeHandler}
-                    required
+                    // required
                 />
             </div>
-            <div>
+
+            <div className="grid">
                 <label>Amount:</label>
                 <input
                     type="number"
                     value={enteredAmount}
                     min="0.01"
                     step="0.01"
-                    placeholder="Amount"
                     onChange={amountChangeHandler}
-                    required
+                    // required
                 />
             </div>
 
-            <label>Date:</label>
-            <input
-                type="date"
-                value={enteredDate}
-                placeholder="Date"
-                onChange={dateChangeHandler}
-                required
-            />
+            <div className="grid">
+                <label>Date:</label>
+                <input
+                    type="date"
+                    value={enteredDate}
+                    onChange={dateChangeHandler}
+                    // required
+                />
+            </div>
 
-            <button className="button" type="submit">Add Expense</button>
+            <div className="expense-buttons">
+                <button className="button" type="submit">Add Expense</button>
+                <button className="button" onClick={hideExpenseForm}>Cancel</button>
+            </div>
         </form>
     )
 }

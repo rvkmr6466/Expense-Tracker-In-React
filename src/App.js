@@ -1,19 +1,25 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
+import Expenses from './models/ExpenseModel';
 import NewExpense from './components/NewExpense/NewExpense';
 import ExpenseItems from './components/ExpenseItems/ExpenseItems';
 
 const App = () => {
 
-	const addExpenseHandler = (expense) =>{
-		console.log("In App.js");
-		console.log(expense);
+	const [addExpense, setAddExpense] = useState(Expenses);
+
+	const addExpenseHandler = (expense) => {
+		console.log("Expense", expense);
+		setAddExpense(prev => {
+			return [...prev, expense]
+		})
 	}
-	
+
+
 	return (
 		<div className="card">
-			<NewExpense onAddExpenses={addExpenseHandler}/>
-			<ExpenseItems />
+			<NewExpense onAddExpenses={addExpenseHandler} />
+			<ExpenseItems addExpense={addExpense} />
 		</div>
 	);
 }

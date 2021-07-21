@@ -1,16 +1,17 @@
 import React from 'react';
 import ExpenseItem from './ExpenseItem/ExpenseItem';
-import Expenses from './../../models/ExpenseModel';
 import ExpenseFilter from './ExpenseFilter/ExpenseFilter';
+import './ExpenseItem/ExpenseItem.css'
 
-const ExpenseItems = () => {
+const ExpenseItems = (props) => {
+    console.log("ExpenseItems:", props.addExpense);
     return (
         <div className="expense-items">
             <div className="expense-filter">
                 <ExpenseFilter />
             </div>
-            <div className="expense-item">
-                {Expenses.map((expense, index) => {
+            <div className="expense-item-list">
+                {props.addExpense.map((expense, index) => {
                     return <ExpenseItem
                         id={index}
                         key={index}
@@ -20,7 +21,7 @@ const ExpenseItems = () => {
                     />
                 })}
             </div>
-        </div>)
+        </div>);
 }
 
 export default ExpenseItems;

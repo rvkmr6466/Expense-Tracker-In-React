@@ -3,7 +3,7 @@ import './ExpenseFilter.css';
 
 const ExpenseFilter = () => {
     return (
-    <div class="expense-filter">
+    <div className="expense-filter">
         Hlo
     </div>
     )
